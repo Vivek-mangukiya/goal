@@ -13,13 +13,26 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+
+Route::group(['prefix'=>'/','namespace'=>'front'],function(){
+    
+    Route::get('/', function () {
+        return view('front.home.index');
+    })->name('home');
+
+    Route::group(['prefix'=>'services'],function(){
+        Route::get('detailed-MEP-design', function () {
+            return view('front.services.detailedMEPdesign');
+        })->name('services.detailedMEPdesign');
+        Route::get('effective-REVIT-modelling',function(){
+            return view('front.services.effectiveREVITmodelling');
+        })->name('services.effectiveREVITmodelling');
+    });
+
 });
 
-Auth::routes();
+// Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/home', 'HomeController@index')->name('home');
 Route::group(['prefix' => 'admin','namespace'=>'Admin'],function (){
     Route::get('login','AuthController@login')->name('admin.login');
     Route::post('login','AuthController@doLogin')->name('admin.login');
@@ -33,6 +46,13 @@ Route::group(['prefix' => 'admin','namespace'=>'Admin'],function (){
         Route::get('/','HomeController@index')->name('admin');
         Route::get('/dashboard','HomeController@index')->name('admin.home');
 
+        Route::group(['prefix' => 'pages'], function () {
+            Route::get('header','PageController@header')->name('pages.header');
+            Route::get('footer','PageController@footer')->name('pages.footer');
+            Route::get('home','PageController@home')->name('pages.home');
+            Route::post('update-meta','PageController@updateMeta')->name('updateMeta');
+            Route::get('update-page-content','PageController@updatePageContent')->name('updatePageContent');
+        });
         //user route
         Route::group(['prefix' => 'user'], function () {
             Route::get('/','UserController@index')->name('admin.user');

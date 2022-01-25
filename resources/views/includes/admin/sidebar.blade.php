@@ -14,11 +14,26 @@
                     </a>
                 </li>
                 <li>
-                    <a href="{{route('admin.user')}}" class="waves-effect">
-                        <i class="bx bx-user"></i>
-                        <span>User</span>
+                    <a href="javascript: void(0);" class="has-arrow waves-effect">
+                        <i class="bx bx-briefcase-alt-2"></i>
+                        <span>Pages</span>
                     </a>
-                </li>   
+                    <ul class="sub-menu" aria-expanded="false">
+                        <li><a href="{{route('pages.header')}}">Header</a></li>
+                        <li><a href="{{route('pages.footer')}}">Footer</a></li>
+                        <li><a href="{{route('pages.home')}}">Home</a></li>
+                        <li>
+                            <a href="javascript: void(0);" class="has-arrow waves-effect">
+                                <span>Services</span>
+                            </a>
+                            <ul class="sub-menu" aria-expanded="false">
+                                <li><a href="#">Header</a></li>
+                                <li><a href="#">Footer</a></li>
+                                <li><a href="#">Testiomonial</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>  
                 <li>
                     <a href="{{route('admin.logout')}}" class="waves-effect"> <i class="bx bx-power-off"></i><span>Logout</span></a>
                 </li>

@@ -15,5 +15,16 @@
     <link href="{{asset('storage/app/public/Adminassets/css/icons.min.css')}}" rel="stylesheet" type="text/css" />
     <!-- App Css-->
     <link href="{{asset('storage/app/public/Adminassets/css/app.min.css')}}" id="app-style" rel="stylesheet" type="text/css" />
+    <link href="assets/images/favicon.svg" rel="shortcut icon" type="image/x-icon" />
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <!-- CSS Links -->
+    <link rel="stylesheet" type="text/css"
+        href="{{ asset('storage/app/public/frontassests/css/bootstrap.min.css') }}" />
+    <link rel="stylesheet" type="text/css" href="{{ asset('storage/app/public/frontassests/css/owl.carosuel.css') }}" />
+    <link rel="stylesheet" type="text/css" href="{{ asset('storage/app/public/frontassests/css/owl.theme.css') }}" />
+    <link rel="stylesheet" type="text/css" href="{{ asset('storage/app/public/frontassests/css/style.css') }}" />
+    <link rel="stylesheet" type="text/css" href="{{ asset('storage/app/public/frontassests/css/responsive.css') }}" />
     @yield('css')
 </head>

@@ -5,19 +5,19 @@
             <div class="navbar-brand-box">
                 <a href="{{URL::to('/')}}" class="logo logo-dark">
                     <span class="logo-sm">
-                        <img src="{{URL::to('storage/app/public/Adminassets/images/ic_appicon_white.png')}}" alt="" height="22">
+                        <img src="{{logoWhite()}}" alt="" height="22">
                     </span>
                     <span class="logo-lg">
-                        <img src="{{URL::to('storage/app/public/Adminassets/images/ic_appicon_white.png')}}" alt="" height="17">
+                        <img src="{{logoWhite()}}" alt="" height="17">
                     </span>
                 </a>
 
                 <a href="{{URL::to('/')}}" class="logo logo-light">
                     <span class="logo-sm">
-                        <img src="{{URL::to('storage/app/public/Adminassets/images/ic_appicon_white.png')}}" alt="" height="22">
+                        <img src="{{logoWhite()}}" alt="" height="22">
                     </span>
                     <span class="logo-lg">
-                        <img src="{{URL::to('storage/app/public/Adminassets/images/ic_appicon_white.png')}}" alt="" height="60">
+                        <img src="{{logoWhite()}}" alt="" height="35">
                     </span>
                 </a>
             </div>

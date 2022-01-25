@@ -4,7 +4,8 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class PageDetail extends Model
+class Metadata extends Model
 {
     //
+    protected $table = 'metadata';
 }
