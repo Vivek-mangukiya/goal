@@ -16,9 +16,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::group(['prefix'=>'/','namespace'=>'front'],function(){
     
-    Route::get('/', function () {
-        return view('front.home.index');
-    })->name('home');
+    Route::get('/', 'HomeController@index')->name('home');
 
     Route::group(['prefix'=>'services'],function(){
         Route::get('detailed-MEP-design', function () {
@@ -51,7 +49,7 @@ Route::group(['prefix' => 'admin','namespace'=>'Admin'],function (){
             Route::get('footer','PageController@footer')->name('pages.footer');
             Route::get('home','PageController@home')->name('pages.home');
             Route::post('update-meta','PageController@updateMeta')->name('updateMeta');
-            Route::get('update-page-content','PageController@updatePageContent')->name('updatePageContent');
+            Route::post('update-page-content','PageController@updatePageContent')->name('updatePageContent');
         });
         //user route
         Route::group(['prefix' => 'user'], function () {

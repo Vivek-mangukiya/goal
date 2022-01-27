@@ -25,6 +25,7 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('storage/app/public/frontassests/css/owl.carosuel.css') }}" />
     <link rel="stylesheet" type="text/css" href="{{ asset('storage/app/public/frontassests/css/owl.theme.css') }}" />
     <link rel="stylesheet" type="text/css" href="{{ asset('storage/app/public/frontassests/css/style.css') }}" />
+    <link rel="stylesheet" type="text/css" href="{{ asset('storage/app/public/Adminassets/css/toastr.min.css') }}" />
     <link rel="stylesheet" type="text/css" href="{{ asset('storage/app/public/frontassests/css/responsive.css') }}" />
     @yield('css')
 </head>

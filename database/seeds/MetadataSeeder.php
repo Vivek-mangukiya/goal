@@ -16,8 +16,10 @@ class MetadataSeeder extends Seeder
             "phone" => '+234 8063557383',
             "email" => "abc@xyz.com",
             "logo" => "logo.svg",
+            "logo_white" => "white-logo",
             "address" => "Xpress House Otunba Jobi Fele Way Alausa Ikeja, Lagos.",
-            "open_time" => "Monday-Friday: 9:00 am to 5:00pm"
+            "open_time" => "Monday-Friday: 9:00 am to 5:00pm",
+            "footer_text" => "At Design Goal, we provide simple, innovative and ..."
         ];
 
         foreach($data as $key => $value){

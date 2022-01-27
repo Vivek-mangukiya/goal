@@ -6,7 +6,31 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script>
 
 @yield('js')
+<script src="{{asset('storage/app/public/frontassests/js/jquery-3.6.0.min.js')}}"></script>
+<script src="{{asset('storage/app/public/frontassests/js/bootstrap.min.js')}}"></script>
+<script src="{{asset('storage/app/public/frontassests/js/owl.carousel.min.js')}}"></script>
+<script src="{{asset('storage/app/public/frontassests/js/jquery-v3.0.4.js')}}"></script>
+<script src="{{asset('storage/app/public/frontassests/js/app.js')}}"></script>
+<script src="{{asset('storage/app/public/Adminassets/js/toastr.min.js')}}"></script>
+<script>
+    $('.filters ul li').click(function() {
+        $('.filters ul li').removeClass('active');
+        $(this).addClass('active');
 
+        var data = $(this).attr('data-filter');
+        $grid.isotope({
+            filter: data
+        })
+    });
+
+    var $grid = $(".grid").isotope({
+        itemSelector: ".all",
+        percentPosition: true,
+        masonry: {
+            columnWidth: ".all"
+        }
+    })
+</script>
 <script src="{{ asset('storage/app/public/Adminassets/js/app.js') }}"></script>
 <script type="text/javascript">
     function changePassword() {
@@ -83,7 +107,11 @@
             processData: false,
             data: form,
             success: function(data) {
-                window.location.reload();
+                console.log(data);
+                toastr.success(data.responseText)
+                setTimeout(function(){
+                    window.location.reload();
+                },2000);
             },
             error: function(data) {
                 console.log({
