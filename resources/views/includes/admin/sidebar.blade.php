@@ -27,8 +27,8 @@
                                 <span>Services</span>
                             </a>
                             <ul class="sub-menu" aria-expanded="false">
-                                <li><a href="#">Header</a></li>
-                                <li><a href="#">Footer</a></li>
+                                <li><a href="{{route('pages.detailedMEPdesign')}}">detailedMEPdesign</a></li>
+                                <li><a href="{{route('pages.effectiveREVITmodelling')}}">effectiveREVITmodelling</a></li>
                                 <li><a href="#">Testiomonial</a></li>
                             </ul>
                         </li>

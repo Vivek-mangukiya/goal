@@ -32,7 +32,7 @@ class HomeSeeder extends Seeder
             "home_portfolio_office_img" => "project-3.png",
             "home_portfolio_office_h2" => "Project title",
             "home_portfolio_hotel_img" => "project-2.png",
-            "home_portfolio_hote_h2" => "Project title",
+            "home_portfolio_hotel_h2" => "Project title",
             "home_portfolio_hospital_img" => "project-4.png",
             "home_portfolio_hospital_h2" => "Project title",
             "home_portfolio_factory_img" => "project-4.png",

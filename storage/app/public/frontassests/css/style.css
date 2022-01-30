@@ -27,6 +27,13 @@ ul,p{
   width: inherit;
   height: inherit;object-fit: cover;
 }
+.line-clamp-5{
+  -webkit-line-clamp: 5 !important;
+}
+::selection {
+  color: var(--white-color);
+  background: var(--primary-color);
+}
 /* Footer start */
 footer{
   background: var(--secondary-color);
@@ -304,6 +311,11 @@ transition: 0.3s all;
     color: var(--white-color);
     margin-bottom: 50px;
     margin-top: 0;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
   }
   .banner .banner-inner .banner-text .heading p{
     font-weight: bold;
@@ -373,150 +385,154 @@ transition: 0.3s all;
   /* tab end */
 
 
-  /*portfolio start*/
-  .section .top-side {
-  text-align: center;
-}
-.section .top-side .title {
-  font-weight: 500;
-  font-size: 15px;
-  display: inline-block;
-}
-.section .top-side .title:after {
-  content: "";
-  display: block;
-  width: 50%;
-  border-bottom: 1px solid #494949;
-  margin: 8px auto;
-}
-.section .top-side h2 {
-  font-weight: 700;
-}
-.section.portfolio .filters {
-  text-align: center;
-  margin-top: 50px;
-}
-.section.portfolio .filters ul {
-  padding: 0;
-}
-.section.portfolio .filters ul li {
-  list-style: none;
-  display: inline-block;
-  margin-right: 40px;
-    padding-bottom: 20px;
-  cursor: pointer;
-  position: relative;
-  font-size: 16px;
-line-height: 25px;
-color: var(--black-color);
-font-weight: 600;
-}
-.section.portfolio .filters ul li.active{
-  color: var(--primary-color);
-}
-.section.portfolio .filters ul li:after {
-  content: "";
-  display: block;
-  width: calc(0% - 60px);
-  position: absolute;
-  height: 5px;
-  bottom: 0;
-  left: 0;
-  background: var(--primary-color);
-  transition: width 350ms ease-out;
-}
-.section.portfolio .heading h2{
-  margin: 0;
-  margin-bottom: 30px;
-}
-.section.portfolio .filters ul li:hover:after {
-  width:100%;
-  transition: width 350ms ease-out;
-}
-.section.portfolio .filters ul li.active:after {
-  width: 100%;
-}
-.section.portfolio .filters-content {
-  margin-top: 50px;
-}
-.section.portfolio .filters-content .show {
-  opacity: 1;
-  visibility: visible;
-  transition: all 350ms;
-}
-.section.portfolio .filters-content .hide {
-  opacity: 0;
-  visibility: hidden;
-  transition: all 350ms;
-}
-.section.portfolio .filters-content .item {
-  text-align: center;
-  cursor: pointer;
-  margin-bottom: 30px;
-}
-.section.portfolio .filters-content .item .p-inner {
-  padding: 20px 30px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-}
-.section.portfolio .filters-content .item .p-inner h5 {
-  font-size: 15px;
-}
-.section.portfolio .filters-content .item .p-inner .cat {
-  font-size: 13px;
-}
-.section.portfolio .filters-content .item img {
-  width: 100%;
-}
-.section.portfolio .filters-content .item .main:after{
-  background-color: var(--green-color);
-    position: absolute;
+   /*portfolio start*/
+   .section .top-side {
+    text-align: center;
+  }
+  .section .top-side .title {
+    font-weight: 500;
+    font-size: 15px;
+    display: inline-block;
+  }
+  .section .top-side .title:after {
     content: "";
     display: block;
-    top: 25px;
-    left: 25px;
-    right: 25px;
-    bottom: 25px;
-    transition: all 0.4s ease-in-out;
-    transform: rotateX(-90deg);
-    transform-origin: 50% 50%;
-    opacity: 0;
-}
-.section.portfolio .filters-content .item .main:hover:after,
- .section.portfolio .filters-content.hover:after{
-  transform: rotateX(0);
-    opacity: 0.9;
-    margin-bottom: 30px;
-}
-.section.portfolio .filters-content .portfolio-hoover-box{
-  position: absolute;
-  top: 50%;
-  left: 20px;
-  right: 20px;
-  z-index: 1;
-  opacity: 0;
-}
-.section.portfolio .filters-content .portfolio-hoover-box h2{
-  font-weight: bold;
-  font-size: 18px;
+    width: 50%;
+    border-bottom: 1px solid #494949;
+    margin: 8px auto;
+  }
+  .section .top-side h2 {
+    font-weight: 700;
+  }
+  .section.portfolio .filters {
+    text-align: center;
+    margin-top: 50px;
+  }
+  .section.portfolio .filters ul {
+    padding: 0;
+  }
+  .section.portfolio .filters ul li {
+    list-style: none;
+    display: inline-block;
+    margin-right: 40px;
+      padding-bottom: 20px;
+    cursor: pointer;
+    position: relative;
+    font-size: 16px;
   line-height: 25px;
-  color: var(--white-color);
-  margin-bottom: 43px;
-}
-.section.portfolio .filters-content .portfolio-hoover-box a{
-  background: transparent;
-  border-radius: 15px;
-  border:2px solid var(--white-color);
-}
-.section.portfolio .filters-content .portfolio-hoover-box a:hover{
-  background: var(--primary-color);
-}
-.section.portfolio .filters-content .main:hover .portfolio-hoover-box, 
-.section.portfolio .filters-content .main.hover .portfolio-hoover-box{
-    transform: translateY(-50%);
+  color: var(--black-color);
+  font-weight: 600;
+  }
+  .section.portfolio .filters ul li.active{
+    color: var(--primary-color);
+  }
+  .section.portfolio .filters ul li:after {
+    content: "";
+    display: block;
+    width: calc(0% - 60px);
+    position: absolute;
+    height: 5px;
+    bottom: 0;
+    left: 0;
+    background: var(--primary-color);
+    transition: width 350ms ease-out;
+  }
+  .section.portfolio .heading h2{
+    margin: 0;
+    margin-bottom: 30px;
+  }
+  .section.portfolio .filters ul li:hover:after {
+    width:100%;
+    transition: width 350ms ease-out;
+  }
+  .section.portfolio .filters ul li.active:after {
+    width: 100%;
+  }
+  .section.portfolio .filters-content {
+    margin-top: 50px;
+  }
+  .section.portfolio .filters-content .show {
     opacity: 1;
-    transition-delay: 0.2s;
-}
-  /*portfolio end*/
+    visibility: visible;
+    transition: all 350ms;
+  }
+  .section.portfolio .filters-content .hide {
+    opacity: 0;
+    visibility: hidden;
+    transition: all 350ms;
+  }
+  .section.portfolio .filters-content .filters-img-gallery-col{
+    position: unset !important;
+  }
+  .section.portfolio .filters-content .item {
+    text-align: center;
+    cursor: pointer;
+    margin-bottom: 30px;
+    position: relative !important;
+  }
+  .section.portfolio .filters-content .item .p-inner {
+    padding: 20px 30px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  }
+  .section.portfolio .filters-content .item .p-inner h5 {
+    font-size: 15px;
+  }
+  .section.portfolio .filters-content .item .p-inner .cat {
+    font-size: 13px;
+  }
+  .section.portfolio .filters-content .item img {
+    width: 100%;
+    object-fit: cover;
+  }
+  .section.portfolio .filters-content .item .main:after{
+    background-color: var(--green-color);
+      position: absolute;
+      content: "";
+      display: block;
+      top: 25px;
+      left: 25px;
+      right: 25px;
+      bottom: 25px;
+      transition: all 0.4s ease-in-out;
+      transform: rotateX(-90deg);
+      transform-origin: 50% 50%;
+      opacity: 0;
+  }
+  .section.portfolio .filters-content .item .main:hover:after,
+   .section.portfolio .filters-content.hover:after{
+    transform: rotateX(0);
+      opacity: 0.9;
+  }
+  .section.portfolio .filters-content .portfolio-hoover-box{
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    right: 20px;
+    z-index: 1;
+    opacity: 0;
+  }
+  .section.portfolio .filters-content .portfolio-hoover-box h2{
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 25px;
+    color: var(--white-color);
+    margin-bottom: 43px;
+  }
+  .section.portfolio .filters-content .portfolio-hoover-box a{
+    background: transparent;
+    border-radius: 15px;
+    border:2px solid var(--white-color);
+  }
+  .section.portfolio .filters-content .portfolio-hoover-box a:hover{
+    background: var(--primary-color);
+  }
+  .section.portfolio .filters-content .main:hover .portfolio-hoover-box, 
+  .section.portfolio .filters-content .main.hover .portfolio-hoover-box{
+      transform: translateY(-50%);
+      opacity: 1;
+      transition-delay: 0.2s;
+  }
+    /*portfolio end*/
 
   /* feature-wrapper Start */
   .feature-wrapper{
@@ -627,6 +643,7 @@ font-weight: 600;
   position: relative;
   background-repeat: no-repeat;
   background-size: cover;
+  background-attachment: fixed;
 }
 .testimonial .heading h2{
   color: var(--white-color);
@@ -715,10 +732,10 @@ margin-top: 33px;
   /* request end */
   /* detailedMEPdesign start */
   .section-pt{
-    padding-top: 150px;
+    padding-top: 100px;
   }
   .section-mt{
-    margin-top: 150px;
+    margin-top: 100px;
   }
   .mep-design-list{
     margin-top: 50px;
@@ -797,3 +814,123 @@ margin-top: 33px;
   margin-left: 40px;
 }
   /* detailedMEPdesign end */
+  /* demandMEP-service start */
+  .innrer-ul-list{
+    padding-left: 20px;
+  }
+  .plan-reduce-wrap{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .plan-reduce-head{
+    background-color: #DEE7EF;
+    padding: 15px 24px;    
+    display: flex;
+    align-items: center;
+  }
+  .plan-reduce-col h4{
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 25px;
+    color: var(--black-color);
+    margin-bottom: 0;
+  }
+  .plan-reduce-content{
+    padding: 14px 24px;
+  }
+  .plan-reduce-content p{
+    line-height: 25px;
+  }
+  /* demandMEP-service end */
+/* services-mechanical start */
+.mechanical-ico-box{
+  width: 100px;
+  height: 100px;
+  border-radius: 35px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.mechanical-need-content{
+  width: calc(100% - 100px);
+  padding-left: 20px;
+}
+.mechanical-blue{
+  background: #1F2259;
+}
+.mechanical-red{
+  background: #EC202C;
+}
+.mechanical-cream{
+  background: #99EEBB;
+}
+.mechanical-needs-box{
+  margin-top: 55px;
+}
+.mechanical-need-content h4{
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 25px;
+  color: var(--black-color);
+}
+.expert-mechanical-box{
+  display: flex;
+  align-items: baseline;
+}
+.xpert-mechanical-ico{
+  max-width: 30px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.expert-mechanical-box p{
+  width: calc(100% - 30px);
+  line-height: 25px;
+  color: var(--white-color);
+  padding-left: 15px;
+}
+.hvac-services-img-box{
+  width: 100%;
+  height: 350px;
+}
+.hvac-services-list li{
+  padding-bottom: 30px;
+  font-weight: 500;
+  font-size: 16px;
+  color: var(--black-color);
+  display: flex;
+  align-items: flex-start;
+}
+.hvac-services-list li:last-child {
+  padding-bottom: 0;
+}
+.hvac-services-wrap{
+  margin-top: 65px;
+  padding-bottom: 60px;
+}
+.hvac-services-highlight{
+  font-weight: bold;
+  font-size: 29px;
+  line-height: 50px;
+  text-align: center;
+  color: #5A79A5;
+  margin-bottom: 0;
+}
+.heading h2{
+  font-size: 29px;
+  line-height: 35px;
+  color: var(--black-color);
+  margin: 50px 0;
+  font-weight: bold;
+  text-align: center;
+}
+.heading p{
+  font-size: 16px;
+  line-height: 25px;
+  text-align: center;
+  color: #000000;
+  max-width: 590px;
+  margin: 0 auto;
+}
+/* services-mechanical end */

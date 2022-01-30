@@ -9,6 +9,7 @@
     <!-- favicon-icon  -->
     <link rel="icon" href="{{URL::to('storage/app/public/Adminassets/image/favicon.ico')}}" type="image/favicon">
     
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ckeditor/4.17.1/contents.min.css"/>
     <!-- Bootstrap Css -->
     <link href="{{asset('storage/app/public/Adminassets/css/bootstrap.min.css')}}" id="bootstrap-style" rel="stylesheet" type="text/css" />
     <!-- Icons Css -->

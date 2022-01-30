@@ -13,6 +13,10 @@ function logo(){
     return URL::to('storage/app/public/frontassests/images/'. $logo);
 }
 
+function frontassets(){
+    return asset('storage/app/public/frontassests');
+}
+
 function contact(){
     $phone = Metadata::where('key','phone')->first()->value;
     return $phone;

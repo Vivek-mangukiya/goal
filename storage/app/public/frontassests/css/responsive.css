@@ -134,6 +134,24 @@
 
   }
 }
+@media (max-width:1599px){
+  .banner .banner-inner .banner-text .heading h2{
+    font-size: 35px;
+  }
+  .request {
+    padding: 100px 0;
+  }
+  .mechanical-ico-box{
+    width: 80px;
+    height: 80px;
+  }
+  .mechanical-need-content h4{
+    font-size: 18px;
+  }
+  .hvac-services-list li{
+    padding-bottom: 20px;
+  }
+}
 @media(max-width:1400px){
   .feature-wrapper{
     padding: 100px 0;
@@ -146,6 +164,30 @@
   }
   .request{
     padding: 100px 0;
+  }
+  .testimonial .item .text-box p{
+    font-size: 16px;
+  }
+}
+@media (max-width:1439px) {
+  .section-pt {
+    padding-top: 60px;
+  }
+  .section-mt {
+    margin-top: 60px;
+  }
+  .program-work-wrap{
+    margin-top: 80px;
+  }
+  .hvac-services-highlight{
+    font-size: 26px;
+  }
+  .mechanical-ico-box {
+    width: 70px;
+    height: 70px;
+  }
+  .mechanical-ico-box img{
+    max-width: 40px;
   }
 }
 @media(max-width:1199px){
@@ -160,6 +202,24 @@
   }
   .request{
     padding: 80px 0;
+  }
+  .program-work-wrap{
+    grid-gap: 20px;
+  }
+  .program-work-content h4{
+    font-size: 23px;
+  }
+  .plan-reduce-head {
+    background-color: #DEE7EF;
+    padding: 15px 24px;
+    min-height: 80px;
+  }
+  .banner .banner-inner .banner-text .heading h2 {
+    font-size: 26px;
+  }
+  .hvac-services-list li {
+    padding-bottom: 13px;
+    font-size: 14px;
   }
 }
 @media(max-width:991px){
@@ -186,7 +246,7 @@
   }
   .testimonial .item .text-box p{
     font-size: 18px;
-    list-style: 25px;
+    line-height: inherit;
   }
   .testimonial .heading h2{
     margin-bottom: 20px;
@@ -202,6 +262,26 @@
   }
   .request .request-text{
     padding: 50px 0;
+  }
+  .heading h2{
+    font-size: 22px;
+  }
+  .program-work-col{
+    height: 250px;
+  }
+  .program-work-content h4 {
+    font-size: 20px;
+  }
+  .plan-reduce-wrap {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .hvac-services-wrap{
+    padding-bottom: 0;
+    margin-top: 20px;
+  }
+  .hvac-services-highlight{
+    line-height: inherit;
+    font-size: 20px;
   }
 }
 @media(max-width:767px){
@@ -228,44 +308,89 @@
     font-size: 16px;
     line-height: 30px;
   }
+  .program-work-wrap {
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 50px;
+  }
+  .heading h2{
+    font-size: 24px;
+    line-height: 30px;
+  }
+  .request .request-text{
+    border-radius: 50px 0px
+  }
+  .plan-reduce-wrap {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .plan-reduce-head{
+    min-height: auto;
+  }
 }
 @media(max-width: 575px){
   .request .request-text .heading p{
     max-width: 290px;
     margin: 0 auto 30px;
   }
-}
+  .section-pt {
+    padding-top: 40px;
+  }
+  .section-mt {
+    margin-top: 40px;
+  }
+  .program-work-wrap{
+    margin-top: 30px;
+  }
   .heading h2{
-    font-size: 29px;
-    line-height: 35px;
-    color: var(--black-color);
-    margin: 50px 0;
-    font-weight: bold;
-    text-align: center;
-  }
-  @media(max-width: 767px){
-    .heading h2{
-      font-size: 24px;
-      line-height: 30px;
-    }
-  }
-  @media(max-width: 575px){
-    .heading h2{
-     margin: 30px 0;
-    }
+   margin: 30px 0;
+   font-size: 20px;
   }
   .heading p{
+    font-size: 15px;
+  }
+  .sticky-top.fixed-menu .navbar-nav .nav-item .nav-link{
+    padding: 13px 0;
+    line-height: inherit;
+  }
+  .mep-design-list {
+    margin-top: 30px;
+  }
+  .program-work-content h4 {
     font-size: 16px;
-    line-height: 25px;
-    text-align: center;
-    color: #000000;
-    max-width: 590px;
-    margin: 0 auto;
   }
-  @media(max-width: 575px){
-    .heading p{
-      font-size: 15px;
-    }
+  .program-work-col {
+    height: 200px;
   }
-
-  
+  .my-button{
+    font-size: 16px;
+  }
+  .banner .banner-inner .banner-text .heading h2 {
+    font-size: 20px;
+  }
+  .plan-reduce-head,.plan-reduce-content {
+    padding: 15px;
+  }
+  .mechanical-ico-box {
+    width: 60px;
+    height: 60px;
+    border-radius: 20px 0px;
+  }
+  .mechanical-ico-box img {
+    max-width: 30px;
+  }
+  .hvac-services-highlight{
+    font-size: 18px;
+  }
+  .mechanical-needs-box {
+    margin-top: 45px;
+  }
+  .hvac-services-img-box{
+    height: 300px;
+    margin-top: 0;
+  }
+}
+@media(max-width: 350px){
+  .program-work-wrap {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+ 

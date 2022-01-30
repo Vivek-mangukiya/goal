@@ -19,12 +19,12 @@ Route::group(['prefix'=>'/','namespace'=>'front'],function(){
     Route::get('/', 'HomeController@index')->name('home');
 
     Route::group(['prefix'=>'services'],function(){
-        Route::get('detailed-MEP-design', function () {
-            return view('front.services.detailedMEPdesign');
-        })->name('services.detailedMEPdesign');
-        Route::get('effective-REVIT-modelling',function(){
-            return view('front.services.effectiveREVITmodelling');
-        })->name('services.effectiveREVITmodelling');
+        Route::get('detailed-MEP-design','ServicesController@detailedMEPdesign')->name('services.detailedMEPdesign');
+        Route::get('effective-REVIT-modelling','ServicesController@effectiveREVITmodelling')->name('services.effectiveREVITmodelling');
+        Route::get('on-demand-MEP-services','ServicesController@onDemandMEPServices')->name('services.onDemandMEPServices');
+        Route::get('services-electrical','ServicesController@servicesElectrical')->name('services.servicesElectrical');
+        Route::get('services-mechanical','ServicesController@servicesMechanical')->name('services.servicesMechanical');
+        Route::get('services-plumbing','ServicesController@servicesPlumbing')->name('services.servicesPlumbing');
     });
 
 });
@@ -48,6 +48,9 @@ Route::group(['prefix' => 'admin','namespace'=>'Admin'],function (){
             Route::get('header','PageController@header')->name('pages.header');
             Route::get('footer','PageController@footer')->name('pages.footer');
             Route::get('home','PageController@home')->name('pages.home');
+            Route::get('detailedMEPdesign','PageController@detailedMEPdesign')->name('pages.detailedMEPdesign');
+            Route::get('effectiveREVITmodelling','PageController@effectiveREVITmodelling')->name('pages.effectiveREVITmodelling');
+            
             Route::post('update-meta','PageController@updateMeta')->name('updateMeta');
             Route::post('update-page-content','PageController@updatePageContent')->name('updatePageContent');
         });
