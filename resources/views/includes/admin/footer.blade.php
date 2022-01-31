@@ -53,11 +53,11 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-sm-6">
-                <script>document.write(new Date().getFullYear())</script> © Ubashi.
+                <script>document.write(new Date().getFullYear())</script> © Goal.
             </div>
             <div class="col-sm-6">
                 <div class="text-sm-right d-none d-sm-block">
-                    Design & Develop by Ubashi
+                    Design & Develop by Goal
                 </div>
             </div>
         </div>
