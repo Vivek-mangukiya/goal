@@ -35,7 +35,7 @@
                                     <div class="col-7">
                                         <div class="text-primary p-4">
                                             <h5 class="text-primary">Welcome Back !</h5>
-                                            <p>Sign in to continue to Ubashi Admin.</p>
+                                            <p>Sign in to continue to Goal Admin.</p>
                                         </div>
                                     </div>
                                     <div class="col-5 align-self-end">
@@ -92,7 +92,7 @@
                             </div>
                         </div>
                         <div class="mt-5 text-center">
-                            <p>© 2020 Crafted with <i class="mdi mdi-heart text-danger"></i> by Ubashi</p>
+                            <p>© 2020 Crafted with <i class="mdi mdi-heart text-danger"></i> by Goal</p>
                         </div>
 
                     </div>
