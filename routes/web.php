@@ -50,6 +50,9 @@ Route::group(['prefix' => 'admin','namespace'=>'Admin'],function (){
             Route::get('home','PageController@home')->name('pages.home');
             Route::get('detailedMEPdesign','PageController@detailedMEPdesign')->name('pages.detailedMEPdesign');
             Route::get('effectiveREVITmodelling','PageController@effectiveREVITmodelling')->name('pages.effectiveREVITmodelling');
+            Route::get('onDemandMEPServices','PageController@onDemandMEPServices')->name('pages.onDemandMEPServices');
+            Route::get('servicesElectrical','PageController@servicesElectrical')->name('pages.servicesElectrical');
+            Route::get('servicesElectrical','PageController@servicesElectrical')->name('pages.servicesElectrical');
             
             Route::post('update-meta','PageController@updateMeta')->name('updateMeta');
             Route::post('update-page-content','PageController@updatePageContent')->name('updatePageContent');

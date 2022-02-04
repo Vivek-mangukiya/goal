@@ -39,6 +39,26 @@ class PageController extends Controller
         return view('admin.pages.detailedMEPdesign',compact('home'));
     }
 
+    public function servicesElectrical(){
+        $home = PageContent::where('key','regexp','servicesElectrical_*')->get();
+        $result = [];
+        foreach($home as $data){
+            $result[$data->key] = $data->value;
+        }
+        $home = $result;
+        return view('admin.pages.servicesElectrical',compact('home'));
+    }
+
+    public function onDemandMEPServices(){
+        $home = PageContent::where('key','regexp','onDemandMEPServices_*')->get();
+        $result = [];
+        foreach($home as $data){
+            $result[$data->key] = $data->value;
+        }
+        $home = $result;
+        return view('admin.pages.onDemandMEPServices',compact('home'));
+    }
+
     public function effectiveREVITmodelling(){
 
         $home = PageContent::where('key','regexp','effectiveREVITmodelling_*')->get();
@@ -82,7 +102,6 @@ class PageController extends Controller
     public function updatePageContent(Request $request){
         try{
             $data = $request->except('_token'); 
-            dd($data);
             foreach($data as $key => $value){
                 if($content = PageContent::where('key',$key)->first()){
                     if($value != null && $value != 'undefined'){   
